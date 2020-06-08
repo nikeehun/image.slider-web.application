@@ -1,0 +1,64 @@
+body {
+    background: #c3ded5;
+    display: flex;
+}
+
+main {
+    width: 600px;
+    height: 100%;
+    background: grey;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#viewer {
+    width: 500px;
+    height: 200px;
+    background: white;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#images {
+    width: 400px;
+    height: 200px;
+    background: grey;
+    margin: auto;
+    
+}
+
+button {
+    margin: 20px;
+    height: 50px;
+    width: 60px;
+    font-size: 40px;
+    border: none;
+}
+
+#back {
+}
+
+#next {
+}
+
+#thumbnails {
+    width: 350px;
+    height: 50px;
+    background: black;
+}
