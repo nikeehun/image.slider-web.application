@@ -4,9 +4,9 @@ body {
 }
 
 main {
-    width: 600px;
+    width: 700px;
     height: 100%;
-    background: #b0d1c1;
+    background: #a6e3b6;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -38,16 +38,16 @@ h1 {
 }
 
 #viewer {
-    width: 500px;
-    height: 200px;
+    width: 700px;
+    height: 400px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
 
 #images {
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     margin: auto;
     padding: 0px;
     position: relative;
@@ -62,7 +62,7 @@ img {
 .description-box {
     position: absolute;
     bottom: 0px;
-    height: 55px;
+    height: 70px;
     width: 100%;
     background: black;
     opacity: 0.6;
@@ -72,16 +72,16 @@ img {
     position: absolute;
     bottom: 0px;
     color: white;
-    padding: 5px;
+    padding: 10px;
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 25px;
     margin-bottom: 1px;
 }
 
 p {
-    font-size: 10px;
+    font-size: 15px;
     margin-top: 0px;
     margin-bottom: 3px;
 }
@@ -92,11 +92,16 @@ p {
     width: 60px;
     font-size: 40px;
     color: white;
-    background: #5d7c6d;
+    background: #65a375;
+    opacity: 0.4;
     border: none;
     border-radius: 2px;
     cursor: pointer;
     text-align: center;
+}
+
+.button:hover {
+    opacity: 1;
 }
 
 #back {
@@ -106,7 +111,15 @@ p {
 }
 
 #thumbnails {
-    width: 350px;
-    height: 50px;
-    background: black;
+    width: 500px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 40px;
 }
