@@ -45,9 +45,13 @@ let imagesData = [
 
 ];
 
+
+
 $('#photo').attr('src', imagesData[currentPhoto].photo);
 $('#photo-title').text(imagesData[currentPhoto].title);
 $('#photo-text').text(imagesData[currentPhoto].text);
+
+
 
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
@@ -69,3 +73,16 @@ $('#back').click(() => {
     $('#photo-text').text(imagesData[currentPhoto].text);
 });
 
+let myImages = ["images/flowers.jpg", "images/flowers_1.jpg", "images/flowers_2.jpg", "images/green.jpg", "images/lights.jpg", "images/little_lake.jpg"];
+
+myImages.forEach((image) => {
+    $('#thumbnails').append(`<img src="${image}" class="thumbnail" >`)
+});
+
+
+
+
+/*let bazsalikom = "images/green.jpg";*/
+
+/*if (currentPhoto === 3) 
+        { $('#viewer').css("height", "550px") };*/
