@@ -75,10 +75,20 @@ $('#back').click(() => {
 
 let myImages = ["images/flowers.jpg", "images/flowers_1.jpg", "images/flowers_2.jpg", "images/green.jpg", "images/lights.jpg", "images/little_lake.jpg"];
 
-myImages.forEach((image) => {
-    $('#thumbnails').append(`<img src="${image}" class="thumbnail" >`)
+myImages.forEach((image, number) => {
+    $('#thumbnails').append(`<img src="${image}" class="thumbnail" data-number="${number}">`)
 });
 
+$('.thumbnail').click(() => {
+    let numberClicked = $(event.target).attr('data-number');
+    
+    $('#photo').attr('src', imagesData[numberClicked].photo);
+    $('#photo-title').text(imagesData[numberClicked].title);
+    $('#photo-text').text(imagesData[numberClicked].text);
+    //let numberIndex = parseInt(numberClicked);
+    /* string --> number, ha kell később */
+    currentPhoto = numberClicked;
+})
 
 
 
