@@ -48,10 +48,15 @@ let imagesData = [
 let loadPhoto = (photoNumber) => {
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').text(imagesData[photoNumber].title);
-    $('#photo-text').text(imagesData[photoNumber].text)
-}
+    $('#photo-text').text(imagesData[photoNumber].text);
+
+    $(#thumbnails[data-number = ${photoNumber}]).css('border', '8px solid white');
+
+};
 
 loadPhoto(currentPhoto);
+
+
 
 /*$('#photo').attr('src', imagesData[currentPhoto].photo);
 $('#photo-title').text(imagesData[currentPhoto].title);
