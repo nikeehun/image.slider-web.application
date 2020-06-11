@@ -45,11 +45,17 @@ let imagesData = [
 
 ];
 
+let loadPhoto = (photoNumber) => {
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+    $('#photo-title').text(imagesData[photoNumber].title);
+    $('#photo-text').text(imagesData[photoNumber].text)
+}
 
+loadPhoto(currentPhoto);
 
-$('#photo').attr('src', imagesData[currentPhoto].photo);
+/*$('#photo').attr('src', imagesData[currentPhoto].photo);
 $('#photo-title').text(imagesData[currentPhoto].title);
-$('#photo-text').text(imagesData[currentPhoto].text);
+$('#photo-text').text(imagesData[currentPhoto].text);*/
 
 
 
