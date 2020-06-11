@@ -62,10 +62,14 @@ $('#photo-text').text(imagesData[currentPhoto].text);*/
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
     currentPhoto++;
-  }
+  } /*else {
+        $('#photo').attr('src', imagesData[0].photo)*/
+    
     $('#photo').attr('src', imagesData[currentPhoto].photo);
     $('#photo-title').text(imagesData[currentPhoto].title);
     $('#photo-text').text(imagesData[currentPhoto].text);
+
+    
  }); 
 
 
