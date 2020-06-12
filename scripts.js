@@ -50,7 +50,7 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
-    $(#thumbnails[data-number = ${photoNumber}]).css('border', '8px solid white');
+    $(`#thumbnails[data-number = ${photoNumber}]`).css('border', '8px solid white');
 
 };
 
@@ -66,13 +66,9 @@ $('#photo-text').text(imagesData[currentPhoto].text);*/
 
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
-    currentPhoto++;
-  } /*else {
-        $('#photo').attr('src', imagesData[0].photo)*/
+    currentPhoto++; }
     
-    $('#photo').attr('src', imagesData[currentPhoto].photo);
-    $('#photo-title').text(imagesData[currentPhoto].title);
-    $('#photo-text').text(imagesData[currentPhoto].text);
+    loadPhoto(currentPhoto);
 
     
  }); 
@@ -81,11 +77,9 @@ $('#next').click(() => {
 
 $('#back').click(() => {
     if (currentPhoto > 0) {
-    currentPhoto--;
-  }  
-    $('#photo').attr('src', imagesData[currentPhoto].photo);
-    $('#photo-title').text(imagesData[currentPhoto].title);
-    $('#photo-text').text(imagesData[currentPhoto].text);
+    currentPhoto--;  }
+    
+    loadPhoto(currentPhoto);
 });
 
 let myImages = ["images/flowers.jpg", "images/flowers_1.jpg", "images/flowers_2.jpg", "images/green.jpg", "images/lights.jpg", "images/little_lake.jpg"];
