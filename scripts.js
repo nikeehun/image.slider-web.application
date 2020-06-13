@@ -51,12 +51,12 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
-    $('#' + photoNumber).css('border', '6px solid black');
+    $('#' + photoNumber).css('border', '6px solid white');
     $('.thumbnail').not($('#' + photoNumber)).css('border', '2px solid white');
+    $('#' + photoNumber).css('opacity', '1');
+    $('.thumbnail').not($('#' + photoNumber)).css('opacity', '0.7');
 
 };
-
-
 
 
 
