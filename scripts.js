@@ -50,7 +50,7 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
-    
+    $('#`${photoNumber}`').css('border', '6px solid black')
 
 };
 
@@ -88,11 +88,11 @@ $('#back').click(() => {
 let myImages = ["images/flowers.jpg", "images/flowers_1.jpg", "images/flowers_2.jpg", "images/green.jpg", "images/lights.jpg", "images/little_lake.jpg"];
 
 myImages.forEach((image, number) => {
-    $('#thumbnails').append(`<img src="${image}" class="thumbnail" data-number="${number}">`)
+    $('#thumbnails').append(`<img src="${image}" class="thumbnail" id="${number}">`)
 });
 
 $('.thumbnail').click(() => {
-    let numberClicked = $(event.target).attr('data-number');
+    let numberClicked = $(event.target).attr('id');
     let numberIndex = parseInt(numberClicked); /* string --> number */
     loadPhoto(numberIndex)
 })
