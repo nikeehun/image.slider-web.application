@@ -55,8 +55,8 @@ let loadPhoto = (photoNumber) => {
 
 };
 
-
 loadPhoto(currentPhoto);
+
 
 
 /*$('#photo').attr('src', imagesData[currentPhoto].photo);
@@ -95,7 +95,8 @@ myImages.forEach((image, number) => {
 $('.thumbnail').click(() => {
     let numberClicked = $(event.target).attr('id');
     let numberIndex = parseInt(numberClicked); /* string --> number */
-    loadPhoto(numberIndex)
+    currentPhoto = numberIndex;
+    loadPhoto(currentPhoto);
 })
 
 
