@@ -46,6 +46,7 @@ let imagesData = [
 ];
 
 let loadPhoto = (photoNumber) => {
+    
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
@@ -55,7 +56,7 @@ let loadPhoto = (photoNumber) => {
 
 };
 
-loadPhoto(currentPhoto);
+
 
 
 
@@ -99,7 +100,7 @@ $('.thumbnail').click(() => {
     loadPhoto(currentPhoto);
 })
 
-
+loadPhoto(currentPhoto);
 
 
 /*let bazsalikom = "images/green.jpg";*/
