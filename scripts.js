@@ -50,7 +50,7 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
-    $('#`${photoNumber}`').css('border', '6px solid black')
+    $('#${photoNumber}').css('border', '6px solid black')
 
 };
 
