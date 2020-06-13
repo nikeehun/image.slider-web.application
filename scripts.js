@@ -54,8 +54,8 @@ let loadPhoto = (photoNumber) => {
 
 };
 
-loadPhoto(currentPhoto);
 
+loadPhoto(currentPhoto);
 
 
 /*$('#photo').attr('src', imagesData[currentPhoto].photo);
@@ -66,7 +66,9 @@ $('#photo-text').text(imagesData[currentPhoto].text);*/
 
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
-    currentPhoto++; } 
+    currentPhoto++; } else {
+        currentPhoto = 0;
+    }
 
     loadPhoto(currentPhoto);
 
@@ -76,7 +78,9 @@ $('#next').click(() => {
 
 $('#back').click(() => {
     if (currentPhoto > 0) {
-    currentPhoto--;  }
+    currentPhoto--;  } else {
+        currentPhoto = imagesData.length - 1;
+    }
     
     loadPhoto(currentPhoto);
 });
@@ -93,9 +97,10 @@ $('.thumbnail').click(() => {
     $('#photo').attr('src', imagesData[numberClicked].photo);
     $('#photo-title').text(imagesData[numberClicked].title);
     $('#photo-text').text(imagesData[numberClicked].text);
-    //let numberIndex = parseInt(numberClicked);
-    /* string --> number, ha kell később */
-    currentPhoto = numberClicked;
+    let numberIndex = parseInt(numberClicked);
+    /* string --> number */
+
+    numberIndex = numberClicked;
 })
 
 
