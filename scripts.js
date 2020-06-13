@@ -93,14 +93,8 @@ myImages.forEach((image, number) => {
 
 $('.thumbnail').click(() => {
     let numberClicked = $(event.target).attr('data-number');
-    
-    $('#photo').attr('src', imagesData[numberClicked].photo);
-    $('#photo-title').text(imagesData[numberClicked].title);
-    $('#photo-text').text(imagesData[numberClicked].text);
-    let numberIndex = parseInt(numberClicked);
-    /* string --> number */
-
-    numberIndex = numberClicked;
+    let numberIndex = parseInt(numberClicked); /* string --> number */
+    loadPhoto(numberIndex)
 })
 
 
