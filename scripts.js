@@ -50,7 +50,7 @@ let loadPhoto = (photoNumber) => {
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
-    $(`#thumbnails[data-number = ${photoNumber}]`).css('border', '8px solid white');
+    
 
 };
 
@@ -66,13 +66,12 @@ $('#photo-text').text(imagesData[currentPhoto].text);*/
 
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
-    currentPhoto++; }
-    
+    currentPhoto++; } 
+
     loadPhoto(currentPhoto);
 
     
  }); 
-
 
 
 $('#back').click(() => {
@@ -98,6 +97,7 @@ $('.thumbnail').click(() => {
     /* string --> number, ha kell később */
     currentPhoto = numberClicked;
 })
+
 
 
 
