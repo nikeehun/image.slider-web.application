@@ -1,13 +1,4 @@
 
-/*let data = {
-    photo: "images/flowers.jpg",
-    title: "Sziklakert",
-    text: "A hátsó kertben található meg, ahol a látványa azonnal odavonzza a kíváncsi tekinteteket."
-};
-
-$('#photo').attr('src', data.photo);
-$('#photo-title').append(data.title);
-$('#photo-text').append(data.text); */
 
 
 let currentPhoto = 0;
@@ -46,25 +37,24 @@ let imagesData = [
 ];
 
 let loadPhoto = (photoNumber) => {
-    
+    /*viewer: */
     $('#photo').attr('src', imagesData[photoNumber].photo);
     $('#photo-title').text(imagesData[photoNumber].title);
     $('#photo-text').text(imagesData[photoNumber].text);
 
+    /*hightlight --> thumbnail 
+        photonumber értéke egyenlő a thumbnail id-val
+    */
     $('#' + photoNumber).css('border', '6px solid white');
-    $('.thumbnail').not($('#' + photoNumber)).css('border', '2px solid white');
+    $('.thumbnail').not($('#' + photoNumber)).css('border', '2px solid white');/*ez azért kell, hogy visszaállítsa a thumbnail eredeti kinézetére, miután elkattintotunk*/
     $('#' + photoNumber).css('opacity', '1');
     $('.thumbnail').not($('#' + photoNumber)).css('opacity', '0.7');
 
-};
+}; 
 
 
 
-/*$('#photo').attr('src', imagesData[currentPhoto].photo);
-$('#photo-title').text(imagesData[currentPhoto].title);
-$('#photo-text').text(imagesData[currentPhoto].text);*/
-
-
+/* nyilak: */
 
 $('#next').click(() => {
     if (currentPhoto < imagesData.length - 1) {
@@ -87,6 +77,8 @@ $('#back').click(() => {
     loadPhoto(currentPhoto);
 });
 
+/*thumbnail: */
+
 let myImages = ["images/flowers.jpg", "images/flowers_1.jpg", "images/flowers_2.jpg", "images/green.jpg", "images/lights.jpg", "images/little_lake.jpg"];
 
 myImages.forEach((image, number) => {
@@ -100,10 +92,11 @@ $('.thumbnail').click(() => {
     loadPhoto(currentPhoto);
 })
 
+
+/*hogy az egészet betöltse, mert először csináltam a highlightot a thumbnailnek (loadphotonál), de csak később csináltam magát a thumbnail részt:*/
 loadPhoto(currentPhoto);
 
 
-/*let bazsalikom = "images/green.jpg";*/
 
-/*if (currentPhoto === 3) 
-        { $('#viewer').css("height", "550px") };*/
+
+/**/
