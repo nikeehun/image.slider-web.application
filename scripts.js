@@ -96,7 +96,4 @@ $('.thumbnail').click(() => {
 /*hogy az egészet betöltse, mert először csináltam a highlightot a thumbnailnek (loadphotonál), de csak később csináltam magát a thumbnail részt:*/
 loadPhoto(currentPhoto);
 
-
-
-
-/**/
+/*this is jut a comment for playing with git commit...*/
