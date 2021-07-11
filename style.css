@@ -1,5 +1,5 @@
 body {
-    background: #e1e8e5;
+    background: #dfe6e3;
     display: flex;
 }
 
@@ -51,7 +51,7 @@ h1 {
     margin: auto;
     padding: 0px;
     position: relative;
-    box-shadow: 5px 5px 10px 1px rgb(27, 52, 61);
+    box-shadow: 5px 5px 10px 1px rgb(27, 51, 59);
 }
 
 img {
