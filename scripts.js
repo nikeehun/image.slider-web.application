@@ -1,4 +1,4 @@
-
+//Made with jQueary
 
 
 let currentPhoto = 0;
